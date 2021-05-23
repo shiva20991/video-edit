@@ -1,0 +1,43 @@
+{
+    "name": "EZ Song Bot",
+    "description": "A bot that can download songs.",
+    "logo": "https://telegra.ph/file/c8d10cbb89d541e3e1d78.jpg",
+    "keywords": [
+        "EZSongBot",
+        "Song Downloader",
+        "Telegram Bot",
+        "EZ Bots"
+    ],
+    
+    "repository": "https://github.com/Ez-Tee/EzSongBot",
+    "success_url": "https://t.me/EzTee_channel",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your Telegram Bot Token from @BotFather",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Your API Hash from my.telegram.org",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "Your APP ID from my.telegram.org",
+            "value": ""
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}
